@@ -1,94 +1,51 @@
+"use client";
+import React from 'react'
 import Image from "next/image";
 import styles from "./page.module.css";
+import { useState } from "react";
+import { FaSteam, FaXbox, FaWindows, FaUnity, FaTwitch, FaTwitter, FaTelegram, FaSpotify } from "react-icons/fa";
 
 export default function Home() {
+  const [piclist, setpiclist] = useState([
+    { id: "0", name: "Steam", img: FaSteam },
+    { id: "0", name: "Steam", img: FaSteam },
+    { id: "1", name: "Xbox", img: FaXbox },
+    { id: "1", name: "Xbox", img: FaXbox },
+    { id: "2", name: "Windows", img: FaWindows },
+    { id: "2", name: "Windows", img: FaWindows },
+    { id: "3", name: "Unity", img: FaUnity },
+    { id: "3", name: "Unity", img: FaUnity },
+    { id: "4", name: "Twitch", img: FaTwitch },
+    { id: "4", name: "Twitch", img: FaTwitch },
+    { id: "5", name: "Twitter", img: FaTwitter },
+    { id: "5", name: "Twitter", img: FaTwitter },
+    { id: "6", name: "Telegram", img: FaTelegram },
+    { id: "6", name: "Telegram", img: FaTelegram },
+    { id: "7", name: "Spotify", img: FaSpotify },
+    { id: "7", name: "Spotify", img: FaSpotify },
+  ]);
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="container-fluid d-flex justify-content-center flex-column flex-fill bg-secondary vh-100">
+      <div className="container">
+      <div className="row text-center">
+      <div className="col">
+      <h4>Match:</h4>
+      </div>
+      <div className="col">
+      <h4>Truns:</h4>
+      </div>
+      </div>
+        <div className="row">
+          {piclist?.map((item, index) => (
+            <div className="col-3 text-center py-2">
+              <div class="card" style={{ width: "10rem", hight: "10rem" }}>
+                <div className="text-center py-2">
+                  <FaSteam size="50" />
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
       </div>
     </main>
   );
