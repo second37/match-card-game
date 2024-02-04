@@ -9,22 +9,22 @@ import { FaSteam, FaXbox, FaWindows, FaUnity, FaTwitch, FaTwitter, FaTelegram, F
 export default function Home() {
 
   const [iconlist, seticonlist] = useState([
-    { id: "0", status: "", src: "/image/facebook.png", name: "img00", img: FaSteam },
-    { id: "0", status: "", src: "/image/facebook.png", name: "img00", img: FaSteam },
-    { id: "1", status: "", src: "/image/instagram.png", name: "img01", img: FaXbox },
-    { id: "1", status: "", src: "/image/instagram.png", name: "img01", img: FaXbox },
-    { id: "2", status: "", src: "/image/linkedin.png", name: "img02", img: FaWindows },
-    { id: "2", status: "", src: "/image/linkedin.png", name: "img02", img: FaWindows },
-    { id: "3", status: "", src: "/image/telegram.png", name: "img03", img: FaUnity },
-    { id: "3", status: "", src: "/image/telegram.png", name: "img03", img: FaUnity },
-    { id: "4", status: "", src: "/image/tiktok.png", name: "img04", img: FaTwitch },
-    { id: "4", status: "", src: "/image/tiktok.png", name: "img04", img: FaTwitch },
-    { id: "5", status: "", src: "/image/twitter.png", name: "img05", img: FaTwitter },
-    { id: "5", status: "", src: "/image/twitter.png", name: "img05", img: FaTwitter },
-    { id: "6", status: "", src: "/image/whatsapp.png", name: "img06", img: FaTelegram },
-    { id: "6", status: "", src: "/image/whatsapp.png", name: "img06", img: FaTelegram },
-    { id: "7", status: "", src: "/image/youtube.png", name: "img07", img: FaSpotify },
-    { id: "7", status: "", src: "/image/youtube.png", name: "img07", img: FaSpotify },
+    { id: 0, status: "", src: "/image/facebook.png", name: "img00", img: FaSteam },
+    { id: 0, status: "", src: "/image/facebook.png", name: "img00", img: FaSteam },
+    { id: 1, status: "", src: "/image/instagram.png", name: "img01", img: FaXbox },
+    { id: 1, status: "", src: "/image/instagram.png", name: "img01", img: FaXbox },
+    { id: 2, status: "", src: "/image/linkedin.png", name: "img02", img: FaWindows },
+    { id: 2, status: "", src: "/image/linkedin.png", name: "img02", img: FaWindows },
+    { id: 3, status: "", src: "/image/telegram.png", name: "img03", img: FaUnity },
+    { id: 3, status: "", src: "/image/telegram.png", name: "img03", img: FaUnity },
+    { id: 4, status: "", src: "/image/tiktok.png", name: "img04", img: FaTwitch },
+    { id: 4, status: "", src: "/image/tiktok.png", name: "img04", img: FaTwitch },
+    { id: 5, status: "", src: "/image/twitter.png", name: "img05", img: FaTwitter },
+    { id: 5, status: "", src: "/image/twitter.png", name: "img05", img: FaTwitter },
+    { id: 6, status: "", src: "/image/whatsapp.png", name: "img06", img: FaTelegram },
+    { id: 6, status: "", src: "/image/whatsapp.png", name: "img06", img: FaTelegram },
+    { id: 7, status: "", src: "/image/youtube.png", name: "img07", img: FaSpotify },
+    { id: 7, status: "", src: "/image/youtube.png", name: "img07", img: FaSpotify },
   ].sort(() => Math.random() - .5));
 
   const [previousCard, setpreviousCard] = useState(-1);
@@ -39,7 +39,7 @@ export default function Home() {
   const matchCheck = (currentCard) => {
     console.log(iconlist[currentCard].id)
     console.log(iconlist[previousCard].id)
-    if (iconlist[currentCard].name === iconlist[previousCard].name) {
+    if (iconlist[currentCard].id === iconlist[previousCard].id) {
       iconlist[previousCard].status = "active matched"
       iconlist[currentCard].status = "active matched"
       setpreviousCard(-1)
