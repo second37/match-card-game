@@ -106,26 +106,29 @@ a {
   }
 }
 
-.card-img {
-  opacity: 0 !important;
-  animation: 1s hideImage linear;
+img {
+  opacity: 0;
+  animation: 2s hideImage linear;
   /* background-color: "blue"; */
   }
   
   .card-img.active {
     transform: rotateY(0);
-    /* opacity: 1 !important; */
   }
   
-  .card-img.active span{
-    opacity: 1 !important;
+  .card-img.active img{
+    opacity: 1 ;
   }
   
   .unmatch{
-    background-color: "red";
-    border-radius: 5px;
+    /* background-color: "red"; */
     animation: 2s hideCard linear;
   }
+
+  /* .match{
+    animation: 2s hideCard linear;
+    opacity: 1 ;
+  } */
   
   @keyframes hideCard {
   0%, 70%{
