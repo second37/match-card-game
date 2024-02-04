@@ -119,6 +119,10 @@ img {
   .card-img.active img{
     opacity: 1 ;
   }
+
+  .hover:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.35) !important; 
+  }
   
   .unmatch{
     /* background-color: "red"; */

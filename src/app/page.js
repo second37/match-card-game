@@ -32,11 +32,14 @@ export default function Home() {
   const [matchList, setmatchList] = useState(0);
   const [unmatchList, setunmatchList] = useState(0);
 
+  console.log(iconlist)
+
   // const cardClassName = iconlist.status ? 'active' : ''
 
-
   const matchCheck = (currentCard) => {
-    if (iconlist[currentCard.id] === iconlist[previousCard].id) {
+    console.log(iconlist[currentCard].id)
+    console.log(iconlist[previousCard].id)
+    if (iconlist[currentCard].name === iconlist[previousCard].name) {
       iconlist[previousCard].status = "active matched"
       iconlist[currentCard].status = "active matched"
       setpreviousCard(-1)
@@ -89,7 +92,7 @@ export default function Home() {
           {iconlist?.map((item, index) => {
             return (
               <div className="col-3 text-center py-2">
-                <div className="card justify-content-center flex-column flex-fill" style={{ height: "5rem", maxWidth: "5rem" }}>
+                <div className="card shadow-none hover justify-content-center flex-column flex-fill" style={{ height: "5rem", maxWidth: "5rem" }}>
                   <span className={`card-img ${item.status} text-center py-2`} >
                     {/* <img src={item.src} id={item.id} alt={item.name} style={{ height: "3rem", maxWidth: "3rem" }}/> */}
                     {/* <item.img size="40" id={item.id} name={item.name} /> */}
